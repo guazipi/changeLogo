@@ -8,33 +8,35 @@
     <script src="lib/OBJMTLLoader.js"></script>
     <script src="lib/MTLLoader.js"></script>
     <script src="lib/stats.min.js"></script>
-    <script src="src/webgltemplate.min.js"></script>
+    <!--<script src="src/webgltemplate.min.js"></script>-->
+    <script src="src/app.js"></script>
+
 
     <script>
     </script>
 </head>
-<body style="padding: 0;margin: 0;overflow: hidden;" onload="main()">
+<body style="padding: 0;margin: 0;overflow: hidden;">
 <div style="position: absolute;left: 10%;top: 0;z-index: 99;">
-    <button onclick="smallerLogo()">缩小Logo</button>
-    <button onclick="biggerLogo()">放大Logo</button>
-    <button onclick="smallerModel()">缩小模型</button>
-    <button onclick="biggerModel()">放大模型</button>
+    <button onclick="app.smallerLogo()">缩小Logo</button>
+    <button onclick="app.biggerLogo()">放大Logo</button>
+    <button onclick="app.smallerModel()">缩小模型</button>
+    <button onclick="app.biggerModel()">放大模型</button>
 </div>
 <div style="position: absolute;left: 10%;top: 30px;z-index: 99;">
-    <button onclick="moveLeft()">左移</button>
-    <button onclick="moveRight()">右移</button>
-    <button onclick="moveTop()">上移</button>
-    <button onclick="moveBottom()">下移</button>
+    <button onclick="app.moveLeft()">左移</button>
+    <button onclick="app.moveRight()">右移</button>
+    <button onclick="app.moveTop()">上移</button>
+    <button onclick="app.moveBottom()">下移</button>
 </div>
 <div style="position: absolute;left: 10%;top: 60px;z-index: 99;">
-    <button onclick="changeLogo()">切换Logo1</button>
-    <button onclick="changeLogo1()">切换Logo2</button>
-    <button onclick="changeLogo2()">切换Logo3</button>
+    <button onclick="app.changeLogo()">切换Logo1</button>
+    <button onclick="app.changeLogo1()">切换Logo2</button>
+    <button onclick="app.changeLogo2()">切换Logo3</button>
 </div>
 <div style="position: absolute;left: 10%;top: 90px;z-index: 99;">
-    <button onclick="changeLingkou()">切换领口1</button>
-    <button onclick="changeLingkou1()">切换领口2</button>
-    <button onclick="changeLingkou2()">切换领口3</button>
+    <button onclick="app.changeLingkou()">切换领口1</button>
+    <button onclick="app.changeLingkou1()">切换领口2</button>
+    <button onclick="app.changeLingkou2()">切换领口3</button>
 </div>
 <script>
 </script>
