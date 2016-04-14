@@ -11,14 +11,6 @@ function init() {
     var lingkou2 = THREE.ImageUtils.loadTexture("model/lingkou2.jpg");
 
     var f = !1, g;
-    //    l = function (a) {
-    //    f = !1
-    //}, m = function (a) {
-    //    f = !0;
-    //    g = a.clientX
-    //}, n = function (a) {
-    //    f && (modelS.rotation.y = g > a.clientX ? modelS.rotation.y - .07 : modelS.rotation.y + .07, g = a.clientX)
-    //},
     var h = function (a) {
         a.traverse(function (a) {
             a instanceof THREE.Mesh && a.material.color.setHex(8947848)
@@ -33,9 +25,6 @@ function init() {
     document.body.appendChild(webglRender.domElement);
 
     webglRender.shadowMapEnabled = !0;
-    //webglRender.domElement.addEventListener("mousedown", m, !1);
-    //webglRender.domElement.addEventListener("mouseup", l, !1);
-    //webglRender.domElement.addEventListener("mousemove", n, !1);
     var scene = new THREE.Scene;
 
     var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, .1, 1000);
@@ -46,7 +35,7 @@ function init() {
     camera2.lookAt(new THREE.Vector3(0, 15, 0));
 
     var orbitControls = new THREE.OrbitControls(camera);
-    orbitControls.autoRotate = true;
+    //orbitControls.autoRotate = true;
     var clock = new THREE.Clock();
 
     var stats = new Stats();
