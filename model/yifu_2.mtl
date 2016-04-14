@@ -1,0 +1,43 @@
+# 3ds Max Wavefront OBJ Exporter v0.94b - (c)2007 guruware
+# File Created: 05.04.2016 15:35:23
+
+newmtl blinn1SG
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps/T1_map_color.jpg
+	map_Kd maps/T1_map_color.jpg
+	map_Ks maps/T1_map_bump.jpg
+
+newmtl blinn2SG
+	Ns 30.0000
+	Ni 1.5000
+	d 0.3700
+	Tr 0.3700
+	Tf 0.3700 0.3700 0.3700 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2300 0.3200 0.3300
+	Ks 1.0000 1.0000 1.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl blinn3SG
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.1800 0.1800 0.1800
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps/lingbiao.jpg
+	map_Kd maps/lingbiao.jpg

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title></title>
+    <script src="lib/three.min.js"></script>
+    <script src="lib/OrbitControls.js"></script>
+    <script src="lib/OBJMTLLoader.js"></script>
+    <script src="lib/MTLLoader.js"></script>
+    <script src="lib/stats.min.js"></script>
+    <script src="src/webgltemplate.min.js"></script>
+
+    <script>
+    </script>
+</head>
+<body style="padding: 0;margin: 0;overflow: hidden;" onload="main()">
+<div style="position: absolute;left: 10%;top: 0;z-index: 99;">
+    <button onclick="smallerLogo()">缩小Logo</button>
+    <button onclick="biggerLogo()">放大Logo</button>
+    <button onclick="smallerModel()">缩小模型</button>
+    <button onclick="biggerModel()">放大模型</button>
+</div>
+<div style="position: absolute;left: 10%;top: 30px;z-index: 99;">
+    <button onclick="moveLeft()">左移</button>
+    <button onclick="moveRight()">右移</button>
+    <button onclick="moveTop()">上移</button>
+    <button onclick="moveBottom()">下移</button>
+</div>
+<div style="position: absolute;left: 10%;top: 60px;z-index: 99;">
+    <button onclick="changeLogo()">切换Logo1</button>
+    <button onclick="changeLogo1()">切换Logo2</button>
+    <button onclick="changeLogo2()">切换Logo3</button>
+</div>
+<div style="position: absolute;left: 10%;top: 90px;z-index: 99;">
+    <button onclick="changeLingkou()">切换领口1</button>
+    <button onclick="changeLingkou1()">切换领口2</button>
+    <button onclick="changeLingkou2()">切换领口3</button>
+</div>
+<script>
+</script>
+</body>
+</html>
