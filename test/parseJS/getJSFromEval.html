@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="evalJS.js"></script>
+</head>
+<body>
+<script>
+    document.writeln(abc);
+    console.log(abc);
+
+    //将unicode编码转化为中文字符
+    //var str="\u521d\u59cb\u5316\u5931\u8d25\uff01";//初始化失败
+    //var str="\u6700\u591a\u53ea\u80fd\u6dfb\u52a0";//最多只能添加
+    //var str="\u4e2a\u7d20\u6750\uff01";//个素材
+//    var str="\u52a0\u5165\u65b0\u56fe\u7247\uff0c\u5f53\u524d\u6709\uff1a";//加入新图片当前有
+//    var str="\u4e2a\u56fe\u7247!";//个图片
+//    var str="\u52a0\u5165\u65b0\u56fe\u7247\uff0c\u5f53\u524d\u6709\uff1a";//加入新图片，当前有：
+    var str="\u533a\u8fd8\u6ca1\u6709\u521d\u59cb\u5316\uff01";//区还没有初始化！
+    str = eval("'" + str + "'"); // "我是unicode编码"
+    alert(str);
+</script>
+
+</body>
+</html>

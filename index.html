@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title></title>
+    <script src="lib/three.min.js"></script>
+    <script src="lib/OrbitControls.js"></script>
+    <script src="lib/TrackballControls.js"></script>
+    <script src="lib/OBJMTLLoader.js"></script>
+    <script src="lib/MTLLoader.js"></script>
+    <script src="lib/stats.min.js"></script>
+    <script src="app.js"></script>
+
+    <script src="./test/jquery-1.11.3.min.js"></script>
+    <script src="./test/utils.js"></script>
+    <script src="./test/realCanvasJs.js"></script>
+
+    <style>
+        #modelDiv{
+            position:absolute;
+            left:100px;
+            top:100px;
+            width:800px;
+            height:800px;
+        }
+        .resultShow{
+            position:absolute;
+            right:100px;
+            top:100px;
+            width:800px;
+            height:800px
+        }
+        #myCanvas{
+            position:absolute;
+            right:100px;
+            top:100px;
+        }
+    </style>
+</head>
+<body style="padding: 0;margin: 0;overflow: hidden;">
+<div id="modelDiv"></div>
+<div class="resultShow">
+    <canvas id="myCanvas"></canvas>
+    <label for="uploadedFile">Drag&drop or select a file to play:</label>
+    <input type="file" id="uploadedFile"></input>
+    <button id="apply">应用到模型</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my canvas draw</title>
+    <script src="jquery-1.11.3.min.js"></script>
+
+    <style>
+        .customCon{
+            width: 500px;
+            position:absolute;
+            top:10px;
+            left:20px;
+        }
+        .resultShow{
+            /*float: left;*/
+            position:relative;
+            height: 526px;
+        }
+        #myCanvas {
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<!--<canvas id="myCanvas" class="myCan"></canvas>-->
+<div class="customCon">
+    <div class="resultShow">
+        <canvas id="myCanvas"></canvas>
+    </div>
+</div>
+<!--<button onclick="init();">fff</button>-->
+<!--<label for="uploadedFile">Drag&drop or select a file to play:</label>-->
+<!--<input type="file" id="uploadedFile"></input>-->
+<!--<img src="./images/laozi.jpg" id="myImage">-->
+<script src="utils.js"></script>
+<script src="realCanvasJs.js"></script>
+
+<script>
+    function init(){
+        var canvas=document.getElementById("myCanvas");
+        console.log(canvas);
+        canvas.height=500;
+        canvas.width=500;
+
+        // 默认可编辑区域
+        var TShirtScope = {
+            x: 157,
+            y: 137,
+            w: 186,
+            h: 249
+        }
+        var currentScope = TShirtScope;
+
+        // diy自定义配置
+        var config = {
+            maxSize_image: 5,		// 最多图层限制数量
+            scaleScope_max: 2,		// 缩放最大范围限制
+            scaleScope_min: 0.1,	// 缩放最小范围限制
+            lineWidth: 1,			// 边框线粗细
+            strokeStyle: '#000000',	// 边框线颜色
+            fillStyle: '#000000',	// 节点填充颜色
+            nodeStyle: 1,			// 节点样式:1方块,0圆点
+            scaleAreaSize: 4		// 节点大小
+        }
+
+        // 初始化diy
+        hbdiy.init({
+            diyid: 'myCanvas',			// canvas的id
+            scope_x: currentScope.x,			// 可编辑区域范围
+            scope_y: currentScope.y,
+            scope_width: currentScope.w,
+            scope_height: currentScope.h,
+            maxSize_image: config.maxSize_image,		// 最多图层限制数量
+            maxSize_text: 5,
+            scaleScope_max: config.scaleScope_max,	// 缩放范围限制
+            scaleScope_min: config.scaleScope_min,
+            resizeType: 1,
+            lineWidth: config.lineWidth,			// 焦点样式
+            strokeStyle: config.strokeStyle,
+            fillStyle: config.fillStyle,
+            nodeStyle: config.nodeStyle,
+            scaleAreaSize: config.scaleAreaSize,
+            debug: config.debug,			// 调试
+            tools: './images/tools.png'
+        });
+        hbdiy.unlock();
+
+        //    var audioInput = document.getElementById('uploadedFile');
+        //    //监听是否有文件被选中
+        //    audioInput.onchange = function() {
+        //        //这里判断一下文件长度可以确定用户是否真的选择了文件，如果点了取消则文件长度为0
+        //        if (audioInput.files.length !== 0) {
+        //            console.log(audioInput.files[0]);
+        //        };
+        //    };
+
+        hbdiy.addImage("./images/laozi.jpg", "laozi.jpg", 1);
+        //    hbdiy.addImage($("#myImage").attr('src'), $("#myImage").data('image'), 1);
+        //
+        //    //    hbdiy.editImage("./images/laozi.jpg", "laozi.jpg", 2);
+        //    hbdiy.leftImage();
+//
+//    /************** diy操作按钮 **************/
+//        // 对齐方式
+//    $('.am_top').click(function () {
+//        hbdiy.topImage();
+//    });
+//    $('.am_middle').click(function () {
+//        hbdiy.middleImage();
+//    });
+//    $('.am_bottom').click(function () {
+//        hbdiy.bottomImage();
+//    });
+//    $('.am_left').click(function () {
+//        hbdiy.leftImage();
+//    });
+//    $('.am_center').click(function () {
+//        hbdiy.centerImage();
+//    });
+//    $('.am_right').click(function () {
+//        hbdiy.rightImage();
+//    });
+//    // 重置
+//    $('.reset').click(function () {
+//        hbdiy.deleteAll();
+//    });
+//    // 撤消&重做
+//    $('.repealPrev').click(function () {
+//        hbdiy.undo();
+//    });
+//    $('.repealNext').click(function () {
+//        hbdiy.redo();
+//    });
+    };
+    init();
+
+//   window.onload=init;
+</script>
+
+</body>
+</html>
