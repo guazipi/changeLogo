@@ -61,7 +61,7 @@ function init() {
     document.getElementById("modelDiv").appendChild(stats.domElement);
 
     scene.add(new THREE.AmbientLight(16777215));
-    var direcLight = new THREE.DirectionalLight(16777215, 0.5);
+    var direcLight = new THREE.DirectionalLight(16777215, 1.0);
     direcLight.position.set(100, 100, 100);
     direcLight.castShadow = !0;
     direcLight.shadowMapWidth = direcLight.shadowMapHeight = 4096;
